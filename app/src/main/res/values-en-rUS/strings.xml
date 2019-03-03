@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Selective Process 4All</string>
+
+    <string name="services">Services</string>
+    <string name="favorites">Favorites</string>
+    <string name="address">Address</string>
+    <string name="comments">Comments</string>
+    <string name="call">Call</string>
+
+    <string name="connection_error">Connection error</string>
+    <string name="connection_error_details">Check your connection or try again later.</string>
+
+    <string name="content_description">Fictitious company 4YOU.</string>
+
+    <string name="our_address">Our Address</string>
+    <string name="alert_botao">Done!</string>
+
+    <string name="title_activity_google_maps">Google Maps</string>
+    <string name="working">Working…</string>
+</resources>

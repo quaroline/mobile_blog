@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Processo Seletivo 4All</string>
+
+    <string name="services">Serviços</string>
+    <string name="favorites">Favoritos</string>
+    <string name="address">Endereço</string>
+    <string name="comments">Comentários</string>
+    <string name="call">Ligar</string>
+
+    <string name="connection_error">Erro de conexão</string>
+    <string name="connection_error_details">Cheque sua conexão ou tente novamente mais tarde.</string>
+
+    <string name="content_description">Empresa fictícia 4YOU.</string>
+
+    <string name="our_address">Nosso Endereço</string>
+    <string name="alert_botao">Feito!</string>
+
+    <string name="title_activity_google_maps">Google Maps</string>
+    <string name="working">Processando…</string>
+</resources>

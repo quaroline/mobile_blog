@@ -1,0 +1,274 @@
+<android.support.v4.widget.SwipeRefreshLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/tp_refresh"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        android:id="@+id/tp_scrollview"
+        tools:context=".controller.TelaPrincipal">
+
+        <android.support.constraint.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".controller.TelaPrincipal">
+
+            <ImageView
+                android:id="@+id/tp_iv_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tp_tv_titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:padding="5dp"
+                android:text="@string/working"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tp_iv_background" />
+
+            <ImageView
+                android:id="@+id/tp_iv_logo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/circle"
+                android:src="@drawable/favoritos"
+                app:layout_constraintBottom_toBottomOf="@+id/tp_iv_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tp_iv_background" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/tp_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tp_iv_logo">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="center">
+
+                    <Button
+                        android:id="@+id/tp_btn_ligar"
+                        android:layout_width="69dp"
+                        android:layout_height="69dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/ligar"
+                        app:layout_constraintEnd_toStartOf="@+id/tp_btn_servico"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:text="@string/call"
+                        android:fontFamily="@font/opensans_bold"
+                        app:layout_constraintEnd_toEndOf="@+id/tp_btn_ligar"
+                        app:layout_constraintStart_toStartOf="@+id/tp_btn_ligar"
+                        app:layout_constraintTop_toBottomOf="@+id/tp_btn_ligar" />
+
+                    <Button
+                        android:id="@+id/tp_btn_servico"
+                        android:layout_width="69dp"
+                        android:layout_height="69dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/servicos"
+                        app:layout_constraintEnd_toStartOf="@+id/tp_btn_localizacao"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/tp_btn_ligar"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:text="@string/services"
+                        android:fontFamily="@font/opensans_bold"
+                        app:layout_constraintEnd_toEndOf="@+id/tp_btn_servico"
+                        app:layout_constraintStart_toStartOf="@+id/tp_btn_servico"
+                        app:layout_constraintTop_toBottomOf="@+id/tp_btn_servico" />
+
+                    <Button
+                        android:id="@+id/tp_btn_localizacao"
+                        android:layout_width="69dp"
+                        android:layout_height="69dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/endereco"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_endereco"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_bold"
+                        android:text="@string/address"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="@+id/tp_btn_localizacao"
+                        app:layout_constraintStart_toStartOf="@+id/tp_btn_localizacao"
+                        app:layout_constraintTop_toBottomOf="@+id/tp_btn_localizacao" />
+
+                    <Button
+                        android:id="@+id/tp_btn_comentario"
+                        android:layout_width="69dp"
+                        android:layout_height="69dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/comentarios"
+                        app:layout_constraintEnd_toStartOf="@+id/tp_btn_favorito"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/tp_btn_localizacao"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:text="@string/comments"
+                        android:fontFamily="@font/opensans_bold"
+                        app:layout_constraintEnd_toEndOf="@+id/tp_btn_comentario"
+                        app:layout_constraintStart_toStartOf="@+id/tp_btn_comentario"
+                        app:layout_constraintTop_toBottomOf="@+id/tp_btn_comentario" />
+
+                    <Button
+                        android:id="@+id/tp_btn_favorito"
+                        android:layout_width="69dp"
+                        android:layout_height="69dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/favoritos"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/tp_btn_comentario"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:text="@string/favorites"
+                        android:fontFamily="@font/opensans_bold"
+                        app:layout_constraintEnd_toEndOf="@+id/tp_btn_favorito"
+                        app:layout_constraintStart_toStartOf="@+id/tp_btn_favorito"
+                        app:layout_constraintTop_toBottomOf="@+id/tp_btn_favorito" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_endereco"
+                        tools:layout_editor_absoluteX="0dp" />
+
+                    <TextView
+                        android:id="@+id/tp_tv_texto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:paddingBottom="8dp"
+                        android:text="@string/working"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view" />
+                </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
+
+            <fragment
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:map="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                map:layout_constraintEnd_toEndOf="parent"
+                map:layout_constraintStart_toStartOf="parent"
+                map:layout_constraintTop_toBottomOf="@+id/tp_cardview" />
+
+            <TextView
+                android:id="@+id/tp_tv_localizacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:fontFamily="@font/opensans_bold"
+                android:gravity="center"
+                android:text="Carregando"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/tp_iv_localizacao"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/map" />
+
+            <ImageView
+                android:id="@+id/tp_iv_localizacao"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/circle"
+                android:src="@drawable/endereco"
+                app:layout_constraintBottom_toBottomOf="@+id/map"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/map" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_comentarios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tp_tv_localizacao"
+                tools:context=".controller.TelaInicial" />
+
+            <ProgressBar
+                android:id="@+id/tp_progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/circle"
+                android:progressDrawable="@drawable/progress_bar"
+                android:scrollbarStyle="insideOverlay"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>
